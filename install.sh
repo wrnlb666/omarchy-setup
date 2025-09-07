@@ -24,5 +24,5 @@ for c in "home" "root"; do
 done
 
 # limine
-sudo sed -i 's/^MAX_SNAPSHOT_ENTRIES=5$/MAX_SNAPSHOT_ENTRIES=20' '/etc/default/limine'
-sudo sed -i 's/^SNAPSHOT_FORMAT_CHOICE=5$/SNAPSHOT_FORMAT_CHOICE=20' '/etc/default/limine'
+sudo sed -i 's/^MAX_SNAPSHOT_ENTRIES=5$/MAX_SNAPSHOT_ENTRIES=20/' '/etc/default/limine'
+sudo sed -i 's/^SNAPSHOT_FORMAT_CHOICE=5$/SNAPSHOT_FORMAT_CHOICE=20/' '/etc/default/limine'
