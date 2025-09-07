@@ -22,4 +22,7 @@ echo '[INFO] Installing config for snapper'
 for c in "home" "root"; do
     sudo ln -sf "$(pwd)/snapper/${c}" "/etc/snapper/configs/${c}"
 done
-echo '[WARN] Remeber to config `/etc/default/limine` manually'
+
+# limine
+sudo sed -i 's/^MAX_SNAPSHOT_ENTRIES=5$/MAX_SNAPSHOT_ENTRIES=20' '/etc/default/limine'
+sudo sed -i 's/^SNAPSHOT_FORMAT_CHOICE=5$/SNAPSHOT_FORMAT_CHOICE=20' '/etc/default/limine'
