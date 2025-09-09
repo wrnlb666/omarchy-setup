@@ -4,10 +4,12 @@ sudo -v
 # bashrc
 echo '[INFO] Installing config for bashrc'
 ln -sf "$(pwd)/bash/bashrc.sh" ~/.bashrc.local
-echo "# my bash config" >> ~/.bashrc
-echo "if [[ -r ~/.bashrc.local ]]; then" >> ~/.bashrc
-echo "    source ~/.bashrc.local" >> ~/.bashrc
-echo "fi" >> ~/.bashrc
+if ! grep -Fq '# my bash config' ~/.bashrc; then
+    echo "# my bash config" >> ~/.bashrc
+    echo "if [[ -r ~/.bashrc.local ]]; then" >> ~/.bashrc
+    echo "    source ~/.bashrc.local" >> ~/.bashrc
+    echo "fi" >> ~/.bashrc
+fi
 
 # hypr
 echo '[INFO] Installing config for hyprland'
