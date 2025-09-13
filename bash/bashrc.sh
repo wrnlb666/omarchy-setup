@@ -149,12 +149,16 @@ uncache() {
 # update script
 update() {
     sudo -v
-    echo '[info] updating Omarchy'
+    echo '[INFO] updating Omarchy'
     omarchy-update
-    echo '[info] updating uv tool'
+    echo '[INFO] updating uv tool'
     uv tool upgrade --all
-    echo '[info] updating stew'
+    echo '[INFO] updating stew'
     stew up --all
+    if [[ command -x "flatpak" ]]; then
+        echo '[INFO] updating flatpak'
+        flatpak update
+    fi
 }
 
 # bash vi mode
