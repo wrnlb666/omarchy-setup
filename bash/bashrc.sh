@@ -155,7 +155,7 @@ update() {
     uv tool upgrade --all
     echo '[INFO] updating stew'
     stew up --all
-    if [[ command -x "flatpak" ]]; then
+    if [[ -x "$(command -v flatpak)" ]]; then
         echo '[INFO] updating flatpak'
         flatpak update
     fi
