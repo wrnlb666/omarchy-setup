@@ -146,21 +146,6 @@ uncache() {
     sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
 }
 
-# update script
-update() {
-    sudo -v
-    echo '[INFO] updating Omarchy'
-    omarchy-update
-    echo '[INFO] updating uv tool'
-    uv tool upgrade --all
-    echo '[INFO] updating stew'
-    stew up --all
-    if [[ -x "$(command -v flatpak)" ]]; then
-        echo '[INFO] updating flatpak'
-        flatpak update
-    fi
-}
-
 # bash vi mode
 set -o vi
 bind '"\C-l": clear-screen'
