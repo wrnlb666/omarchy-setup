@@ -11,15 +11,19 @@ alias ll="ls -lha"
 
 # tre
 if [[ -x "$(command -v tre)" ]]; then
-    alias tree="tre"
+    tre() {
+        command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null
+    }
 fi
-tre() {
-    command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null
-}
 
 # lazygit
 if [[ -x "$(command -v lazygit)" ]]; then
     alias lg="lazygit"
+fi
+
+# lazydocker
+if [[ -x "$(command -v lazydocker)" ]]; then
+    alias ldk="lazydocker"
 fi
 
 # distrobox
