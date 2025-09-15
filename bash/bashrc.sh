@@ -22,6 +22,11 @@ if [[ -x "$(command -v lazygit)" ]]; then
     alias lg="lazygit"
 fi
 
+# distrobox
+if [[ -x "$(command -v distrobox)" ]]; then
+    alias db="distrobox"
+fi
+
 # python venv
 venv() {
     if [[ $# == 0 ]]; then
