@@ -23,7 +23,11 @@ echo '[WARN] Remeber to config `~/.config/hypr/monitors.conf` manually'
 # snapper
 echo '[INFO] Installing config for snapper'
 for c in "home" "root"; do
-    sudo ln -sf "$(pwd)/snapper/${c}" "/etc/snapper/configs/${c}"
+    sudo snapper -c "${c}" set-config TIMELINE_CREATE="no"
+    sudo snapper -c "${c}" set-config NUMBER_LIMIT="5"
+    sudo snapper -c "${c}" set-config NUMBER_LIMIT="5"
+    sudo snapper -c "${c}" set-config NUMBER_MIN_AGE="600"
+    sudo snapper -c "${c}" set-config NUMBER_LIMIT_IMPORTANT="5"
 done
 
 # limine
