@@ -74,12 +74,6 @@ if [[ -x "$(command -v gomi)" ]]; then
     alias rm="gomi"
 fi
 
-# zoxide
-unalias cd
-if [[ -x "$(command -v zoxide)" ]]; then
-    source <(zoxide init bash --cmd cd)
-fi
-
 # man page
 if [[ -x "$(command -v bat)" ]]; then
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
