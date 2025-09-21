@@ -30,7 +30,7 @@ for c in "home" "root"; do
     sudo snapper -c "${c}" set-config NUMBER_LIMIT_IMPORTANT="5"
 
     # Timeline
-    sudo snapper -c "${c}" set-config TIMELINE_CREATE="no"
+    sudo snapper -c "${c}" set-config TIMELINE_CREATE="yes"
     sudo snapper -c "${c}" set-config TIMELINE_MIN_AGE="600"
     sudo snapper -c "${c}" set-config TIMELINE_CLEANUP="yes"
     sudo snapper -c "${c}" set-config TIMELINE_LIMIT_HOURLY="1"
