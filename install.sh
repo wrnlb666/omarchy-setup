@@ -23,16 +23,27 @@ echo '[WARN] Remeber to config `~/.config/hypr/monitors.conf` manually'
 # snapper
 echo '[INFO] Installing config for snapper'
 for c in "home" "root"; do
-    sudo snapper -c "${c}" set-config TIMELINE_CREATE="no"
-    sudo snapper -c "${c}" set-config NUMBER_LIMIT="5"
-    sudo snapper -c "${c}" set-config NUMBER_LIMIT="5"
+    # Number
     sudo snapper -c "${c}" set-config NUMBER_MIN_AGE="600"
+    sudo snapper -c "${c}" set-config NUMBER_CLEANUP="yes"
+    sudo snapper -c "${c}" set-config NUMBER_LIMIT="10"
     sudo snapper -c "${c}" set-config NUMBER_LIMIT_IMPORTANT="5"
+
+    # Timeline
+    sudo snapper -c "${c}" set-config TIMELINE_CREATE="no"
+    sudo snapper -c "${c}" set-config TIMELINE_MIN_AGE="600"
+    sudo snapper -c "${c}" set-config TIMELINE_CLEANUP="yes"
+    sudo snapper -c "${c}" set-config TIMELINE_LIMIT_HOURLY="1"
+    sudo snapper -c "${c}" set-config TIMELINE_LIMIT_DAILY="2"
+    sudo snapper -c "${c}" set-config TIMELINE_LIMIT_WEEKLY="1"
+    sudo snapper -c "${c}" set-config TIMELINE_LIMIT_MONTHLY="1"
+    sudo snapper -c "${c}" set-config TIMELINE_LIMIT_QUARTERLY="0"
+    sudo snapper -c "${c}" set-config TIMELINE_LIMIT_YEARLY="0"
 done
 
 # limine
-sudo sed -i 's/^MAX_SNAPSHOT_ENTRIES=5$/MAX_SNAPSHOT_ENTRIES=20/' '/etc/default/limine'
-sudo sed -i 's/^SNAPSHOT_FORMAT_CHOICE=5$/SNAPSHOT_FORMAT_CHOICE=20/' '/etc/default/limine'
+sudo sed -E -i 's/^MAX_SNAPSHOT_ENTRIES=[0-9]+$/MAX_SNAPSHOT_ENTRIES=30/' '/etc/default/limine'
+sudo sed -E -i 's/^SNAPSHOT_FORMAT_CHOICE=[0-9]+$/SNAPSHOT_FORMAT_CHOICE=30/' '/etc/default/limine'
 
 # alacritty
 ln -sf "$(pwd)/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
