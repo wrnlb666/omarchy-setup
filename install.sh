@@ -47,3 +47,6 @@ sudo sed -E -i 's/^SNAPSHOT_FORMAT_CHOICE=[0-9]+$/SNAPSHOT_FORMAT_CHOICE=30/' '/
 
 # alacritty
 ln -sf "$(pwd)/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
+
+# ghostty
+ln -sf "$(pwd)/ghostty/config" ~/.config/ghostty/config
