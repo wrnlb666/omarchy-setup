@@ -26,7 +26,7 @@ for c in "home" "root"; do
     # Number
     sudo snapper -c "${c}" set-config NUMBER_MIN_AGE="0"
     sudo snapper -c "${c}" set-config NUMBER_CLEANUP="yes"
-    sudo snapper -c "${c}" set-config NUMBER_LIMIT="10"
+    sudo snapper -c "${c}" set-config NUMBER_LIMIT="5"
     sudo snapper -c "${c}" set-config NUMBER_LIMIT_IMPORTANT="5"
 
     # Timeline
@@ -42,6 +42,7 @@ for c in "home" "root"; do
 done
 
 # limine
+echo '[INFO] Installing config for limine'
 sudo sed -E -i 's/^MAX_SNAPSHOT_ENTRIES=[0-9]+$/MAX_SNAPSHOT_ENTRIES=30/' '/etc/default/limine'
 sudo sed -E -i 's/^SNAPSHOT_FORMAT_CHOICE=[0-9]+$/SNAPSHOT_FORMAT_CHOICE=30/' '/etc/default/limine'
 
