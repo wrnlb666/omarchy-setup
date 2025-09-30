@@ -26,11 +26,11 @@ for c in "home" "root"; do
     # Number
     sudo snapper -c "${c}" set-config NUMBER_MIN_AGE="0"
     sudo snapper -c "${c}" set-config NUMBER_CLEANUP="yes"
-    sudo snapper -c "${c}" set-config NUMBER_LIMIT="5"
+    sudo snapper -c "${c}" set-config NUMBER_LIMIT="15"
     sudo snapper -c "${c}" set-config NUMBER_LIMIT_IMPORTANT="5"
 
     # Timeline
-    sudo snapper -c "${c}" set-config TIMELINE_CREATE="yes"
+    sudo snapper -c "${c}" set-config TIMELINE_CREATE="no"
     sudo snapper -c "${c}" set-config TIMELINE_MIN_AGE="0"
     sudo snapper -c "${c}" set-config TIMELINE_CLEANUP="yes"
     sudo snapper -c "${c}" set-config TIMELINE_LIMIT_HOURLY="0"
