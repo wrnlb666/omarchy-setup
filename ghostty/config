@@ -21,4 +21,4 @@ shell-integration-features = no-cursor
 keybind = f11=toggle_fullscreen
 
 # Slowdown mouse scrolling
-mouse-scroll-multiplier = 0.95
+mouse-scroll-multiplier = 2
