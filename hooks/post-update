@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This hook is called after an Omarchy system update has been performed.
+# To put it into use, remove .sample from the name.
+
+# Example: Show notification after the system has been updated.
+# notify-send "Update Performed" "Your system is now up to date"
+
+# flatpak
+echo -e "\e[32m\n[INFO] Updating flatpak\e[0m"
+sudo flatpak update
+
+# uv
+echo -e "\e[32m\n[INFO] Updating uv tools\e[0m"
+uv tool upgrade --all
