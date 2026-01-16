@@ -8,7 +8,7 @@
 
 # flatpak
 echo -e "\e[32m\n[INFO] Updating flatpak\e[0m"
-sudo flatpak update
+sudo flatpak update -y
 
 # uv
 echo -e "\e[32m\n[INFO] Updating uv tools\e[0m"
