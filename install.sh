@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 sudo -v
 
+# switch channel to edge
+./install_channel_edge.sh
+
 # hypr
 ./install_hypr.sh
 
