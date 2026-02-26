@@ -9,7 +9,7 @@ hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable hyprexpo
 for f in $(command ls hypr); do
-    [[ -f "~/.config/hypr/${f}" ]] && cp "~/.config/hypr/${f}" "~/.config/hypr/${f}.bak"
+    [[ -f "${HOME}/.config/hypr/${f}" ]] && cp "${HOME}/.config/hypr/${f}" "${HOME}/.config/hypr/${f}.bak"
     ln -sf "$(pwd)/hypr/${f}" ~/.config/hypr/
 done
-echo '[WARN] Remeber to config `~/.config/hypr/monitors.conf` manually'
+echo "[WARN] Remeber to config \`~/.config/hypr/monitors.conf\` manually"
