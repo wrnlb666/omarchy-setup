@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 sudo -v
 
+# add chaotic-aur
+./install_chaotic.sh
+
 # switch channel to edge
 ./install_channel_edge.sh
 
