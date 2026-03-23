@@ -7,9 +7,6 @@ sudo -v
 # add chaotic-aur
 ./install_chaotic.sh
 
-# switch channel to edge
-./install_channel_edge.sh
-
 # hypr
 ./install_hypr.sh
 
@@ -27,3 +24,6 @@ sudo -v
 
 # hooks
 ./install_hooks.sh
+
+# switch channel to edge
+./install_channel_edge.sh
