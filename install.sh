@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 sudo -v
 
+# waybar
+./install_waybar.sh
+
 # add chaotic-aur
 ./install_chaotic.sh
 
