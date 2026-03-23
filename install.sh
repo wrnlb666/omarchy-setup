@@ -25,5 +25,5 @@ sudo -v
 # hooks
 ./install_hooks.sh
 
-# switch channel to edge
-./install_channel_edge.sh
+# switch channel to rc
+./install_channel_rc.sh
