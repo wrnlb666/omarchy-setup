@@ -65,7 +65,7 @@
     // "format-alt": "{:L%d %B W%V %Y}",
     // "format": "{:L%d %b %Y %a %H:%M}",
     "format": "{:L%d %b %I:%M %p %a }",
-    "format-alt": "{:L%d %B W%V %Y %H:%M}",
+    "format-alt": "{:L%d %B W%V %A %Y %H:%M}",
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
