@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 sudo -v
 
+arr=("root")
+
 echo '[INFO] Installing config for snapper'
-for c in "home" "root"; do
+for c in "${arr[@]}"; do
     # Number
     sudo snapper -c "${c}" set-config NUMBER_MIN_AGE="0"
     sudo snapper -c "${c}" set-config NUMBER_CLEANUP="yes"
