@@ -7,6 +7,9 @@ sudo -v
 # add chaotic-aur
 ./install_chaotic.sh
 
+# hyprpm
+./install_hyprpm.sh
+
 # hypr
 ./install_hypr.sh
 
