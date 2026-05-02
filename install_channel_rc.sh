@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-omarchy-channel-set rc
+omarchy channel set rc
