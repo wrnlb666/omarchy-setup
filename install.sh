@@ -4,6 +4,9 @@ sudo -v
 # waybar
 ./install_waybar.sh
 
+# switch channel to rc
+./install_channel_rc.sh
+
 # add chaotic-aur
 ./install_chaotic.sh
 
@@ -28,5 +31,3 @@ sudo -v
 # hooks
 ./install_hooks.sh
 
-# switch channel to rc
-./install_channel_rc.sh
