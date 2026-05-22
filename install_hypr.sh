@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-sudo -v
 
 # hypr
 echo '[INFO] Installing config for hyprland'
