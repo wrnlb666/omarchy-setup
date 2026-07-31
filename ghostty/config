@@ -25,6 +25,23 @@ shell-integration-features = no-cursor,ssh-env
 # Keyboard bindings
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
+# Match the tmux pane prefix and bindings (Ctrl-b, then the key).
+keybind = ctrl+b>ctrl+b=text:\x02
+keybind = ctrl+b>-=new_split:down
+keybind = ctrl+b>shift+-=new_split:right
+keybind = ctrl+b>h=goto_split:left
+keybind = ctrl+b>j=goto_split:down
+keybind = ctrl+b>k=goto_split:up
+keybind = ctrl+b>l=goto_split:right
+keybind = ctrl+b>shift+h=resize_split:left,10
+keybind = ctrl+b>shift+j=resize_split:down,10
+keybind = ctrl+b>shift+k=resize_split:up,10
+keybind = ctrl+b>shift+l=resize_split:right,10
+keybind = ctrl+b>shift+==toggle_split_zoom
+# Send Shift+Enter as CSI-u so TUIs can distinguish it from Enter.
+keybind = shift+enter=csi:13;2u
+# Legacy encoding sends Alt+Shift+Enter the same as Alt+Enter; send CSI-u so tmux can match M-S-Enter.
+keybind = alt+shift+enter=csi:13;4u
 keybind = super+control+shift+alt+arrow_down=resize_split:down,100
 keybind = super+control+shift+alt+arrow_up=resize_split:up,100
 keybind = super+control+shift+alt+arrow_left=resize_split:left,100
