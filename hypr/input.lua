@@ -7,7 +7,9 @@ hl.config({
   input = {
     -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
     -- kb_layout = "us,dk,eu",
-    -- kb_options = "compose:caps,shift:both_capslock_cancel,grp:alts_toggle",
+    -- Do not enable shift:both_capslock_cancel: it prevents Left Shift from
+    -- reaching Fcitx5 as a modifier-only trigger.
+    kb_options = "compose:caps",
 
     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
     -- kb_variant = "intl",
