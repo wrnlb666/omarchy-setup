@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 sudo -v
 
-# waybar
-./install_waybar.sh
-
-# switch channel to rc
-./install_channel_rc.sh
+# switch omarchy channel
+./install_channel.sh
 
 # add chaotic-aur
 ./install_chaotic.sh
