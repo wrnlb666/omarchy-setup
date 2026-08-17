@@ -28,31 +28,30 @@
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 
-
-hl.unbind("SUPER + J")                      -- toggle split
-hl.unbind("SUPER + L")                      -- toggle workspace layout
-hl.unbind("SUPER + K")                      -- omarchy-menu-keybindgs
-hl.unbind("SUPER + F")                      -- Force full screen
-hl.unbind("SUPER + C")                      -- copy
-hl.unbind("SUPER + V")                      -- paste
-hl.unbind("SUPER + T")                      -- Toggle floating
-hl.unbind("SUPER + O")                      -- Float and Pin
-hl.unbind("SUPER + SHIFT + M")              -- Spotify
-hl.unbind("SUPER + SHIFT + Y")              -- Youtube
-hl.unbind("SUPER + SHIFT + E")              -- hey email
-hl.unbind("SUPER + SHIFT + C")              -- hey calendar
-hl.unbind("SUPER + SHIFT + G")              -- signal-desktop
-hl.unbind("SUPER + SHIFT + F")              -- nautilus
-hl.unbind("SUPER + SHIFT + B")              -- browser
-hl.unbind("SUPER + SHIFT + X")              -- X
-hl.unbind("SUPER + SHIFT + S")              -- Google Maps
-hl.unbind("SUPER + SHIFT + SLASH")          -- 1password
-hl.unbind("SUPER + SHIFT + ALT + G")        -- WhatsApp
-hl.unbind("SUPER + SHIFT + ALT + B")        -- Private browser
-hl.unbind("SUPER + SHIFT + ALT + X")        -- X post
-hl.unbind("SUPER + ALT + SHIFT + F")        -- File manager (cwd)
-hl.unbind("SUPER + SHIFT + CTRL + G")       -- Google Messages
-hl.unbind("SUPER + SHIFT + RETURN")         -- Browser
+hl.unbind("SUPER + J") -- toggle split
+hl.unbind("SUPER + L") -- toggle workspace layout
+hl.unbind("SUPER + K") -- omarchy-menu-keybindgs
+hl.unbind("SUPER + F") -- Force full screen
+hl.unbind("SUPER + C") -- copy
+hl.unbind("SUPER + V") -- paste
+hl.unbind("SUPER + T") -- Toggle floating
+hl.unbind("SUPER + O") -- Float and Pin
+hl.unbind("SUPER + SHIFT + M") -- Spotify
+hl.unbind("SUPER + SHIFT + Y") -- Youtube
+hl.unbind("SUPER + SHIFT + E") -- hey email
+hl.unbind("SUPER + SHIFT + C") -- hey calendar
+hl.unbind("SUPER + SHIFT + G") -- signal-desktop
+hl.unbind("SUPER + SHIFT + F") -- nautilus
+hl.unbind("SUPER + SHIFT + B") -- browser
+hl.unbind("SUPER + SHIFT + X") -- X
+hl.unbind("SUPER + SHIFT + S") -- Google Maps
+hl.unbind("SUPER + SHIFT + SLASH") -- 1password
+hl.unbind("SUPER + SHIFT + ALT + G") -- WhatsApp
+hl.unbind("SUPER + SHIFT + ALT + B") -- Private browser
+hl.unbind("SUPER + SHIFT + ALT + X") -- X post
+hl.unbind("SUPER + ALT + SHIFT + F") -- File manager (cwd)
+hl.unbind("SUPER + SHIFT + CTRL + G") -- Google Messages
+hl.unbind("SUPER + SHIFT + RETURN") -- Browser
 
 -- my own config
 o.bind("SUPER + B", "Browser", { omarchy = "browser" })
@@ -67,7 +66,11 @@ o.bind("SUPER + A", "ChatGPT", { webapp = "https://chatgpt.com/?temporary-chat=t
 o.bind("SUPER + SHIFT + B", "Browser (private)", { omarchy = "browser --private" })
 o.bind("SUPER + SHIFT + Y", "YouTube Music", { webapp = "https://music.youtube.com/" })
 o.bind("SUPER + SHIFT + E", "File manager (cwd)", { omarchy = "nautilus-cwd" })
-o.bind("SUPER + SHIFT + RETURN", "Floating terminal", [[setsid uwsm-app -- alacritty --class=Omarchy --title=Omarchy -e "${SHELL:-bash}" -c 'omarchy-show-logo; command cd "$(omarchy-cmd-terminal-cwd)"; exec "${SHELL:-bash}"']])
+o.bind(
+	"SUPER + SHIFT + RETURN",
+	"Floating terminal",
+	[[setsid uwsm-app -- alacritty --class=Omarchy --title=Omarchy -e "${SHELL:-bash}" -c 'omarchy-show-logo; command cd "$(omarchy-cmd-terminal-cwd)"; exec "${SHELL:-bash}"']]
+)
 
 -- Move focus with SUPER + vi mode keys
 o.bind("SUPER + H", "Move focus left", hl.dsp.focus({ direction = "l" }))
@@ -97,8 +100,8 @@ o.bind("ALT + mouse_down", "Next window in group", hl.dsp.group.prev())
 
 -- Activate window in a group by more numbers
 for index = 1, 10 do
-  local key = index == 10 and "0" or tostring(index)
-  o.bind("ALT + " .. key, "Switch to group window " .. index, hl.dsp.group.active({ index = index }))
+	local key = index == 10 and "0" or tostring(index)
+	o.bind("ALT + " .. key, "Switch to group window " .. index, hl.dsp.group.active({ index = index }))
 end
 
 -- SUPER + scroll to swap workspace
@@ -117,4 +120,8 @@ o.bind("SUPER + code:20", "Expand column", hl.dsp.layout("colresize -conf"))
 o.bind("SUPER + code:21", "Shrink column", hl.dsp.layout("colresize +conf"))
 
 -- scratchpad
-o.bind("SUPER + SHIFT + S", "Move window to scratchpad", hl.dsp.window.move({ workspace = "special:scratchpad", follow = false }))
+o.bind(
+	"SUPER + SHIFT + S",
+	"Move window to scratchpad",
+	hl.dsp.window.move({ workspace = "special:scratchpad", follow = false })
+)
