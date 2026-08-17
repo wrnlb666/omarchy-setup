@@ -9,6 +9,7 @@ hl.config({
 		-- kb_layout = "us,dk,eu",
 		-- Do not enable shift:both_capslock_cancel: it prevents Left Shift from
 		-- reaching Fcitx5 as a modifier-only trigger.
+		kb_options = "",
 		-- kb_options = "compose:caps,shift:both_capslock_cancel",
 
 		-- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
