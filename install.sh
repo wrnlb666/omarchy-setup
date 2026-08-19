@@ -7,11 +7,11 @@ sudo -v
 # add chaotic-aur
 ./install_chaotic.sh
 
-# hyprpm
-# ./install_hyprpm.sh
-
 # hypr
 ./install_hypr.sh
+
+# omarchy plugins
+./install_plugins.sh
 
 # snapper
 ./install_snapper.sh
@@ -28,3 +28,5 @@ sudo -v
 # hooks
 ./install_hooks.sh
 
+# install environment variable
+./install_env.sh
