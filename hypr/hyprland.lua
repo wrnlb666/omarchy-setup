@@ -17,7 +17,7 @@ require("default.hypr.omarchy")
 -- Put your personal overrides in these files. They're loaded after Omarchy's
 -- defaults so package updates can improve the defaults without rewriting your
 -- ~/.config/hypr files.
-require("monitors")
+require("hypr.monitors")
 require("hypr.input")
 require("hypr.bindings")
 require("hypr.looknfeel")
@@ -32,4 +32,4 @@ require("default.hypr.toggles")
 -- o.window("qemu", { workspace = "5" })
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
-dofile(os.getenv("HOME") .. "/.config/hypr/hyprmoncfg.lua")
+dofile((os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.config") .. "/hypr/hyprmoncfg.lua")
