@@ -1,11 +1,6 @@
 -- Keep only your personal window, workspace, and device rules here.
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 
--- Disable unused input devices.
-hl.device({ name = "gpio-keys", enabled = false })
-hl.device({ name = "gpio-keys-1", enabled = false })
-hl.device({ name = "video-bus", enabled = false })
-
 -- Use the scrolling layout for the scratchpad workspace.
 hl.workspace_rule({ workspace = "special:scratchpad", layout = "scrolling" })
 
