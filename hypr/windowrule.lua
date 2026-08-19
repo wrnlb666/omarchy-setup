@@ -10,12 +10,12 @@ local floating_apps = {
 	{ name = "wechat-weixin", match = { initial_title = "^(Weixin)$" }, size = { 1200, 800 } },
 	{ name = "wechat-wechat", match = { initial_title = "^(WeChat)$" }, size = { 1200, 800 } },
 	{ name = "Bitwarden", match = { initial_class = "^(Bitwarden)$" }, size = { 1200, 800 } },
-	{ name = "localsend", match = { initial_class = "^(localsend)$" }, size = { 800, 600 } },
+	{ name = "localsend", match = { initial_title = "^(LocalSend)$" }, size = { 800, 600 } },
 	{ name = "AmneziaVPN", match = { initial_class = "^(AmneziaVPN)$" }, size = { 400, 800 } },
-	{ name = "org.gnome.Boxes", match = { initial_class = "^(org.gnome.Boxes)$" }, size = { 1200, 800 } },
-	{ name = "Mattermost.Desktop", match = { initial_class = "^(Mattermost.Desktop)$" }, size = { 1200, 800 } },
+	{ name = "Boxes", match = { initial_class = "^(org.gnome.Boxes)$" }, size = { 1200, 800 } },
+	{ name = "Mattermost", match = { initial_class = "^(Mattermost.Desktop)$" }, size = { 1200, 800 } },
 	{
-		name = "org.manjaro.pamac.manager",
+		name = "pamac",
 		match = { initial_class = "^(org.manjaro.pamac.manager)$" },
 		size = { 1200, 800 },
 	},
@@ -28,4 +28,3 @@ end
 hl.window_rule({ match = { initial_class = "^(QQ)$" }, float = true, center = true })
 hl.window_rule({ match = { initial_class = "^(wechat)$" }, float = true, center = true })
 hl.window_rule({ match = { class = "^(Bitwarden)$" }, tag = "-floating-window" })
-hl.window_rule({ name = "Waydroid", match = { initial_class = "^([wW]aydroid.*)$" }, fullscreen = true })
