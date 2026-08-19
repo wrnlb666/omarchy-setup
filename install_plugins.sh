@@ -6,5 +6,5 @@ plugins=(
 )
 
 for plugin in "${plugins[@]}"; do
-    omarchy plugin add "$plugin" --enable
+    omarchy plugin add "$plugin" --enable --yes
 done
