@@ -5,11 +5,11 @@
 hl.workspace_rule({ workspace = "special:scratchpad", layout = "scrolling" })
 
 -- Open selected desktop applications as centered floating windows.
-local floating_apps = {
+local apps = {
 	-- { name = "QQ-spawn", match = { initial_class = "^(QQ)$" } },
 	-- { name = "QQ", match = { initial_title = "^(QQ)$" }, size = { 1200, 800 } },
-	-- { name = "wechat-wechat", match = { initial_class = "^(wechat)$" } },
 	-- { name = "wechat-weixin", match = { initial_title = "^(Weixin)$" }, size = { 1200, 800 } },
+	{ name = "wechat-wechat", match = { initial_class = "^(wechat)$" }, float = false },
 	{ name = "Bitwarden", match = { initial_class = "^(Bitwarden)$" }, size = { 1200, 800 } },
 	{ name = "localsend", match = { initial_title = "^(LocalSend)$" }, size = { 800, 600 } },
 	{ name = "AmneziaVPN", match = { initial_class = "^(AmneziaVPN)$" }, size = { 400, 800 } },
@@ -19,11 +19,18 @@ local floating_apps = {
 		name = "pamac",
 		match = { initial_class = "^(org.manjaro.pamac.manager)$" },
 		size = { 1200, 800 },
+		float = true,
 	},
 }
 
-for _, app in ipairs(floating_apps) do
-	hl.window_rule({ name = app.name, match = app.match, float = true, center = true, size = app.size })
+for _, app in ipairs(apps) do
+	hl.window_rule({
+		name = app.name,
+		match = app.match,
+		size = app.size,
+		float = app.float ~= false,
+		center = true ~= false,
+	})
 end
 
 hl.window_rule({ match = { class = "^(Bitwarden)$" }, tag = "-floating-window" })
