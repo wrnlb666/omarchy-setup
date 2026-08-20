@@ -6,10 +6,10 @@ hl.workspace_rule({ workspace = "special:scratchpad", layout = "scrolling" })
 
 -- Open selected desktop applications as centered floating windows.
 local floating_apps = {
-	{ name = "QQ-spawn", match = { initial_class = "^(QQ)$" } },
-	{ name = "QQ", match = { initial_title = "^(QQ)$" }, size = { 1200, 800 } },
-	{ name = "wechat-wechat", match = { initial_class = "^(wechat)$" } },
-	{ name = "wechat-weixin", match = { initial_title = "^(Weixin)$" }, size = { 1200, 800 } },
+	-- { name = "QQ-spawn", match = { initial_class = "^(QQ)$" } },
+	-- { name = "QQ", match = { initial_title = "^(QQ)$" }, size = { 1200, 800 } },
+	-- { name = "wechat-wechat", match = { initial_class = "^(wechat)$" } },
+	-- { name = "wechat-weixin", match = { initial_title = "^(Weixin)$" }, size = { 1200, 800 } },
 	{ name = "Bitwarden", match = { initial_class = "^(Bitwarden)$" }, size = { 1200, 800 } },
 	{ name = "localsend", match = { initial_title = "^(LocalSend)$" }, size = { 800, 600 } },
 	{ name = "AmneziaVPN", match = { initial_class = "^(AmneziaVPN)$" }, size = { 400, 800 } },
