@@ -125,3 +125,6 @@ o.bind(
 	"Move window to scratchpad",
 	hl.dsp.window.move({ workspace = "special:scratchpad", follow = false })
 )
+
+-- mirador
+o.bind("SUPER + R", "Workspace overview", "omarchy-shell shell toggle mirador '{}'")
