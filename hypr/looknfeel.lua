@@ -63,7 +63,7 @@ hl.config({
 	scrolling = {
 		-- See only one column per screen instead of two.
 		direction = "right",
-		column_width = 0.5,
+		column_width = 0.667,
 		follow_focus = true,
 		focus_fit_method = 1,
 		follow_min_visible = 1.0,
