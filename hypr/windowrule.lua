@@ -13,7 +13,11 @@ local apps = {
 	},
 	{
 		name = "QQ-spawn",
-		match = { initial_class = "^(QQ)$", initial_title = "negative:^(QQ)$" },
+		match = {
+			float = true,
+			initial_class = "^(QQ)$",
+			initial_title = "negative:^(QQ)$",
+		},
 		float = true,
 		center = false,
 		border_size = 0,
@@ -33,8 +37,8 @@ local apps = {
 	{
 		name = "codex-pet",
 		match = {
-			initial_class = "^chatgpt$",
 			float = true,
+			initial_class = "^chatgpt$",
 		},
 		border_size = 0,
 		pin = true,
