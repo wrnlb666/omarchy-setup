@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=QQ
+Exec=omarchy-shell shell call wrnlb.chat-tray open qq
+Terminal=false
+Type=Application
+Icon=com.qq.QQ
+StartupWMClass=QQ
+Categories=Network;InstantMessaging;
+Comment=QQ
+X-Flatpak=com.qq.QQ

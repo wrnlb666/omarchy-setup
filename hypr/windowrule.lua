@@ -3,6 +3,7 @@
 
 -- Use the scrolling layout for the scratchpad workspace.
 hl.workspace_rule({ workspace = "special:scratchpad", layout = "scrolling" })
+hl.workspace_rule({ workspace = "10", layout = "scrolling" })
 
 -- Open selected desktop applications as centered floating windows.
 local apps = {

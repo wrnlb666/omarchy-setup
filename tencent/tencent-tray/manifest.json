@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "wrnlb.chat-tray",
+  "name": "Chat tray launcher",
+  "version": "1.0.0",
+  "author": "wrnlb",
+  "description": "Reopen QQ and WeChat from their StatusNotifier tray items.",
+  "kinds": ["overlay"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "overlay": "Service.qml"
+  }
+}

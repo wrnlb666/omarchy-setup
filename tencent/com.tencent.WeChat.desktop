@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=WeChat
+Name[zh_CN]=微信
+Exec=omarchy-shell shell call wrnlb.chat-tray open wechat
+Terminal=false
+Type=Application
+Icon=com.tencent.WeChat
+StartupWMClass=WeChat
+Categories=Network;
+Keywords=wechat;weixin;
+Comment=WeChat Desktop
+Comment[zh_CN]=微信桌面版
+X-Flatpak=com.tencent.WeChat
