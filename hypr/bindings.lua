@@ -36,6 +36,8 @@ hl.unbind("SUPER + C") -- copy
 hl.unbind("SUPER + V") -- paste
 hl.unbind("SUPER + T") -- Toggle floating
 hl.unbind("SUPER + O") -- Float and Pin
+hl.unbind("SUPER + code:20") -- shrink window
+hl.unbind("SUPER + code:21") -- expand window
 hl.unbind("SUPER + SHIFT + M") -- Spotify
 hl.unbind("SUPER + SHIFT + Y") -- Youtube
 hl.unbind("SUPER + SHIFT + E") -- hey email
@@ -116,8 +118,22 @@ o.bind("SUPER + SHIFT + F", "Force full screen", hl.dsp.window.fullscreen({ mode
 
 -- scrolling layout related key bindings
 o.bind("SUPER + I", "Toggle workspace layout", "omarchy-hyprland-workspace-layout-toggle")
-o.bind("SUPER + code:20", "Expand column", hl.dsp.layout("colresize -conf"))
-o.bind("SUPER + code:21", "Shrink column", hl.dsp.layout("colresize +conf"))
+local function by_layout(scrolling, dwindle)
+	return function()
+		local ws = hl.get_active_special_workspace() or hl.get_active_workspace()
+		hl.dispatch(ws and ws.tiled_layout == "scrolling" and scrolling or dwindle)
+	end
+end
+o.bind(
+	"SUPER + code:20",
+	"Expand",
+	by_layout(hl.dsp.layout("colresize -conf"), hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
+)
+o.bind(
+	"SUPER + code:21",
+	"Shrink",
+	by_layout(hl.dsp.layout("colresize +conf"), hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
+)
 
 -- scratchpad
 o.bind(
