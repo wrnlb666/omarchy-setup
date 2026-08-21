@@ -13,6 +13,9 @@ sudo -v
 # omarchy plugins
 ./install_plugins.sh
 
+# wechat and QQ
+./install_tencent.sh
+
 # snapper
 ./install_snapper.sh
 
