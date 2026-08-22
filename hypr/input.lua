@@ -54,8 +54,8 @@ hl.config({
 -- Enable touchpad gestures for changing workspaces.
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
-hl.gesture({ fingers = 3, direction = "swipe", mods = "SUPER", action = "resize" })
-hl.gesture({ fingers = 3, direction = "horizontal", mods = "ALT", action = "scroll_move" })
+hl.gesture({ fingers = 3, direction = "swipe", mods = "ALT", action = "resize" })
+hl.gesture({ fingers = 3, direction = "horizontal", mods = "SUPER", action = "scroll_move" })
 hl.gesture({ fingers = 4, direction = "vertical", action = "special", workspace_name = "scratchpad" })
 
 -- mirador
