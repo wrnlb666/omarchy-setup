@@ -20,10 +20,22 @@ hl.config({
 		-- Use round window corners.
 		rounding = 8,
 
+		blur = {
+			passes = 3,
+			enabled = true,
+		},
+
 		-- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
 		-- dim_inactive = true,
 		-- dim_strength = 0.15,
 	},
+})
+
+-- https://github.com/sanjyay/Mirador#optional-background-blur
+hl.layer_rule({
+	name = "mirador-blur",
+	match = { namespace = "^omarchy-workspace-overview$" },
+	blur = true,
 })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#animations
