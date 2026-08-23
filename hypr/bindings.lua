@@ -112,6 +112,10 @@ hl.unbind("SUPER + mouse_down")
 o.bind("SUPER + mouse_up", "Scroll active workspace backward", hl.dsp.focus({ workspace = "e+1" }))
 o.bind("SUPER + mouse_down", "Scroll active workspace forward", hl.dsp.focus({ workspace = "e-1" }))
 
+-- SUPER + SHIFT + scroll to swap workspace
+o.bind("SUPER + SHIFT + mouse_up", "Scroll active window backward", hl.dsp.layout("focus l"))
+o.bind("SUPER + SHIFT + mouse_down", "Scroll active window forward", hl.dsp.layout("focus r"))
+
 -- SUPER + F to maximize window
 o.bind("SUPER + F", "Full width", hl.dsp.window.fullscreen({ mode = "maximized" }))
 o.bind("SUPER + SHIFT + F", "Force full screen", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
