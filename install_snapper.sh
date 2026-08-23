@@ -10,6 +10,7 @@ for c in "${arr[@]}"; do
     sudo snapper -c "${c}" set-config NUMBER_CLEANUP="yes"
     sudo snapper -c "${c}" set-config NUMBER_LIMIT="10"
     sudo snapper -c "${c}" set-config NUMBER_LIMIT_IMPORTANT="5"
+    sudo snapper -c "${c}" set-config UNIQUE_NUMBER="no"
 
     # Timeline
     sudo snapper -c "${c}" set-config TIMELINE_CREATE="no"
