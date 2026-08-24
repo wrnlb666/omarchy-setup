@@ -71,7 +71,7 @@ o.bind("SUPER + SHIFT + E", "File manager (cwd)", { omarchy = "nautilus-cwd" })
 o.bind(
 	"SUPER + SHIFT + RETURN",
 	"Floating terminal",
-	[[setsid uwsm-app -- alacritty --class=Omarchy --title=Omarchy -e "${SHELL:-bash}" -c 'omarchy-show-logo; command cd "$(omarchy-cmd-terminal-cwd)"; exec "${SHELL:-bash}"']]
+    "omarchy launch floating terminal with presentation bash"
 )
 
 -- Move focus with SUPER + vi mode keys
