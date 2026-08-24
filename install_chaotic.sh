@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if pacman-conf --repo-list | grep chaotic-aur >/dev/null; then
+    exit 0
+fi
+
 echo '[INFO] Installing chaotic AUR'
 
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
@@ -10,5 +14,5 @@ sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mi
 
 if ! grep -q '\[chaotic-aur\]' /etc/pacman.conf; then
     printf '\n%s\n%s\n' '[chaotic-aur]' 'Include = /etc/pacman.d/chaotic-mirrorlist' |
-        sudo tee -a /etc/pacman.conf > /dev/null
+        sudo tee -a /etc/pacman.conf >/dev/null
 fi
