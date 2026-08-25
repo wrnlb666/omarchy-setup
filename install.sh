@@ -22,9 +22,6 @@ sudo -v
 # limine
 ./install_limine.sh
 
-# alacritty
-./install_alacritty.sh
-
 # ghostty
 ./install_ghostty.sh
 

@@ -3,9 +3,6 @@
 # hypr
 ./install_hypr.sh
 
-# alacritty
-./install_alacritty.sh
-
 # ghostty
 ./install_ghostty.sh
 
