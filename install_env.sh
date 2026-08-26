@@ -9,6 +9,6 @@ for path in environment.d/*.conf; do
         cp \
             "${HOME}/.config/environment.d/${envi}" \
             "${HOME}/.config/environment.d/${envi}.bak"
-    cp -f "$(pwd)/environment.d/${envi}" ~/.config/environment.d/
+    ln -sf "$(pwd)/environment.d/${envi}" ~/.config/environment.d/
 done
 echo "Logout and login again to take effect"
