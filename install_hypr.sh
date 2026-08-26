@@ -9,5 +9,5 @@ for path in hypr/*; do
         cp \
             "${HOME}/.config/hypr/${conf}" \
             "${HOME}/.config/hypr/${conf}.bak"
-    ln -sf "$(pwd)/hypr/${conf}" ~/.config/hypr/
+    cp -f "$(pwd)/hypr/${conf}" ~/.config/hypr/
 done

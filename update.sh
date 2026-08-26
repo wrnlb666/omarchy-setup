@@ -12,3 +12,6 @@ occ update font
 
 # add chaotic-aur
 ./install_chaotic.sh
+
+# update env
+./install_env.sh

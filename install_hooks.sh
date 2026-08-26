@@ -2,5 +2,5 @@
 
 echo '[INFO] Installing hooks'
 for hook in hooks/*; do
-    ln -sf "$(pwd)/${hook}" "${HOME}/.config/omarchy/hooks/$(basename "$hook")"
+    cp -rf "$(pwd)/${hook}" "${HOME}/.config/omarchy/hooks/$(basename "$hook")"
 done
