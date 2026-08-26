@@ -10,6 +10,9 @@ sudo -v
 # hypr
 ./install_hypr.sh
 
+# fonts
+./install_fonts.sh
+
 # omarchy plugins
 ./install_plugins.sh
 
