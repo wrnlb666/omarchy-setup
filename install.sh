@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 sudo -v
 
+# fonts
+./install_fonts.sh
+
 # switch omarchy channel
 ./install_channel.sh
 
@@ -9,9 +12,6 @@ sudo -v
 
 # hypr
 ./install_hypr.sh
-
-# fonts
-./install_fonts.sh
 
 # omarchy plugins
 ./install_plugins.sh
