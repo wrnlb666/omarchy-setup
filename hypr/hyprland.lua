@@ -24,8 +24,7 @@ require("hypr.looknfeel")
 require("hypr.autostart")
 require("hypr.windowrule")
 require("hypr.devicefix")
-
-hl.env("LIBVA_DRIVER_NAME", "iHD")
+require("hypr.environ")
 
 -- Toggle config flags dynamically.
 require("default.hypr.toggles")
