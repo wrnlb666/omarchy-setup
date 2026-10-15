@@ -20,7 +20,7 @@ local apps = {
 		},
 		float = true,
 		center = false,
-		border_size = 0,
+		-- border_size = 0,
 	},
 	{
 		name = "wechat",
@@ -32,7 +32,7 @@ local apps = {
 		match = { initial_class = "^(wechat)$", initial_title = "negative:^(Weixin|微信)$" },
 		float = true,
 		center = false,
-		border_size = 0,
+		-- border_size = 0,
 	},
 	{
 		name = "codex-pet",
@@ -40,7 +40,7 @@ local apps = {
 			float = true,
 			initial_class = "^chatgpt$",
 		},
-		border_size = 0,
+		-- border_size = 0,
 		pin = true,
 	},
 	{ name = "Bitwarden", match = { initial_class = "^(Bitwarden)$" }, size = { 1200, 800 } },
