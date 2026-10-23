@@ -38,6 +38,7 @@ hl.unbind("SUPER + T") -- Toggle floating
 hl.unbind("SUPER + O") -- Float and Pin
 hl.unbind("SUPER + code:20") -- shrink window
 hl.unbind("SUPER + code:21") -- expand window
+hl.unbind("SUPER + SHIFT + A") -- chatgpt
 hl.unbind("SUPER + SHIFT + M") -- Spotify
 hl.unbind("SUPER + SHIFT + Y") -- Youtube
 hl.unbind("SUPER + SHIFT + E") -- hey email
@@ -64,7 +65,8 @@ o.bind("SUPER + D", "Launch apps", "omarchy-menu toggle apps")
 o.bind("SUPER + M", "Show key bindings", "omarchy-menu-keybindings")
 o.bind("SUPER + E", "File manager", { omarchy = "nautilus" })
 o.bind("SUPER + Y", "YouTube", { webapp = "https://youtube.com/" })
-o.bind("SUPER + A", "ChatGPT", { webapp = "https://chatgpt.com/?temporary-chat=true" })
+o.bind("SUPER + A", "DeepSeek", { webapp = "https://chat.deepseek.com" })
+o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com/" })
 o.bind("SUPER + SHIFT + B", "Browser (private)", { omarchy = "browser --private" })
 o.bind("SUPER + SHIFT + Y", "YouTube Music", { webapp = "https://music.youtube.com/" })
 o.bind("SUPER + SHIFT + E", "File manager (cwd)", { omarchy = "nautilus-cwd" })
