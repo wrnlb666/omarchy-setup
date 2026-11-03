@@ -70,6 +70,7 @@ o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com/" })
 o.bind("SUPER + SHIFT + B", "Browser (private)", { omarchy = "browser --private" })
 o.bind("SUPER + SHIFT + Y", "YouTube Music", { webapp = "https://music.youtube.com/" })
 o.bind("SUPER + SHIFT + E", "File manager (cwd)", { omarchy = "nautilus-cwd" })
+o.bind("SUPER + SHIFT + C", "voxtype record toggle", "voxtype record toggle")
 o.bind(
 	"SUPER + SHIFT + RETURN",
 	"Floating terminal",
