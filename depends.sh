@@ -3,5 +3,6 @@
 depends=(
     'ghostty'
     'flatpak'
+    'voxtype'
     'uv'
 )
