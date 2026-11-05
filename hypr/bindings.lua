@@ -35,6 +35,7 @@ hl.unbind("SUPER + F") -- Force full screen
 hl.unbind("SUPER + C") -- copy
 hl.unbind("SUPER + V") -- paste
 hl.unbind("SUPER + T") -- Toggle floating
+hl.unbind("SUPER + I") -- Switch input language
 hl.unbind("SUPER + O") -- Float and Pin
 hl.unbind("SUPER + code:20") -- shrink window
 hl.unbind("SUPER + code:21") -- expand window
@@ -146,16 +147,3 @@ o.bind(
 
 -- mirador
 o.bind("SUPER + R", "Workspace overview", "omarchy-shell shell toggle mirador '{}'")
-
--- Dictation keys from before Alt + Space and Right Alt became the defaults.
--- Remove these lines to give the keys back to applications.
-if o.dictation_installed and o.dictation_installed() then
-	o.bind("SUPER + CTRL + X", "Toggle dictation", "omarchy-dictation toggle")
-	o.bind_hold(
-		"F9",
-		"Start dictation (push-to-talk)",
-		"omarchy-dictation start",
-		"Stop dictation (push-to-talk)",
-		"omarchy-dictation stop"
-	)
-end
