@@ -44,7 +44,6 @@ local apps = {
 		pin = true,
 	},
 	{ name = "Bitwarden", match = { initial_class = "^(Bitwarden)$" }, size = { 1200, 800 } },
-	{ name = "localsend", match = { initial_title = "^(LocalSend)$" }, size = { 800, 600 } },
 	{ name = "AmneziaVPN", match = { initial_class = "^(AmneziaVPN)$" }, size = { 400, 800 } },
 	{ name = "Boxes", match = { initial_class = "^(org.gnome.Boxes)$" }, size = { 1200, 800 } },
 	{ name = "Mattermost", match = { initial_class = "^(Mattermost.Desktop)$" }, size = { 1200, 800 } },
