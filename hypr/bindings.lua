@@ -59,7 +59,6 @@ hl.unbind("SUPER + SHIFT + RETURN") -- Browser
 -- my own config
 o.bind("SUPER + B", "Browser", { omarchy = "browser" })
 o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
-o.bind("SUPER + T", "voxtype record toggle", "voxtype record toggle")
 o.bind("SUPER + O", "Toggle floating", hl.dsp.window.float({ action = "toggle" }))
 o.bind("SUPER + V", "Toggle split", hl.dsp.layout("togglesplit"))
 o.bind("SUPER + D", "Launch apps", "omarchy-menu toggle apps")
@@ -71,11 +70,7 @@ o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com/" })
 o.bind("SUPER + SHIFT + B", "Browser (private)", { omarchy = "browser --private" })
 o.bind("SUPER + SHIFT + Y", "YouTube Music", { webapp = "https://music.youtube.com/" })
 o.bind("SUPER + SHIFT + E", "File manager (cwd)", { omarchy = "nautilus-cwd" })
-o.bind(
-	"SUPER + SHIFT + RETURN",
-	"Floating terminal",
-    "omarchy launch floating terminal with presentation bash"
-)
+o.bind("SUPER + SHIFT + RETURN", "Floating terminal", "omarchy launch floating terminal with presentation bash")
 
 -- Move focus with SUPER + vi mode keys
 o.bind("SUPER + H", "Move focus left", hl.dsp.focus({ direction = "l" }))
@@ -151,3 +146,16 @@ o.bind(
 
 -- mirador
 o.bind("SUPER + R", "Workspace overview", "omarchy-shell shell toggle mirador '{}'")
+
+-- Dictation keys from before Alt + Space and Right Alt became the defaults.
+-- Remove these lines to give the keys back to applications.
+if o.dictation_installed and o.dictation_installed() then
+	o.bind("SUPER + CTRL + X", "Toggle dictation", "omarchy-dictation toggle")
+	o.bind_hold(
+		"F9",
+		"Start dictation (push-to-talk)",
+		"omarchy-dictation start",
+		"Stop dictation (push-to-talk)",
+		"omarchy-dictation stop"
+	)
+end
