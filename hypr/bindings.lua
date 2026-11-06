@@ -37,6 +37,7 @@ hl.unbind("SUPER + V") -- paste
 hl.unbind("SUPER + T") -- Toggle floating
 hl.unbind("SUPER + I") -- Switch input language
 hl.unbind("SUPER + O") -- Float and Pin
+hl.unbind("SUPER + A") -- Select all
 hl.unbind("SUPER + M") -- Minimize on floating workspace
 hl.unbind("SUPER + code:20") -- shrink window
 hl.unbind("SUPER + code:21") -- expand window
