@@ -147,5 +147,15 @@ o.bind(
 	hl.dsp.window.move({ workspace = "special:scratchpad", follow = false })
 )
 
--- mirador
+-- https://github.com/sanjyay/Mirador
 o.bind("SUPER + R", "Workspace overview", "omarchy-shell shell toggle mirador '{}'")
+
+-- https://github.com/mtolhuys/fathom
+do
+	local fathom = os.getenv("HOME") .. "/.config/omarchy/plugins/io.github.mtolhuys.fathom/hypr/fathom.lua"
+	local file = io.open(fathom, "r")
+	if file then
+		file:close()
+		pcall(dofile, fathom)
+	end
+end
