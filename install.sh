@@ -10,11 +10,11 @@ sudo -v
 # add chaotic-aur
 ./install_chaotic.sh
 
-# hypr
-./install_hypr.sh
-
 # omarchy plugins
 ./install_plugins.sh
+
+# hypr
+./install_hypr.sh
 
 # wechat and QQ
 ./install_tencent.sh
