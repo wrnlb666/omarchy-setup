@@ -63,7 +63,7 @@ hl.gesture({
 	fingers = 3,
 	direction = "up",
 	action = function()
-		hl.dispatch(hl.dsp.exec_cmd("omarchy-shell shell summon mirador '{}'"))
+		hl.dispatch(hl.dsp.exec_cmd('omarchy-shell shell summon mirador \'{"cycleUI":"full","keybindMode":"normal"}\''))
 	end,
 })
 hl.gesture({
