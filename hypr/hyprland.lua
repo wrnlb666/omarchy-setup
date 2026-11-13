@@ -23,7 +23,6 @@ require("hypr.bindings")
 require("hypr.looknfeel")
 require("hypr.autostart")
 require("hypr.windowrule")
-require("hypr.devicefix")
 require("hypr.environ")
 
 -- Toggle config flags dynamically.
@@ -31,6 +30,16 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+
+-- Optional fixes specific to this machine, kept outside Git.
+do
+	local path = (os.getenv("XDG_CONFIG_HOME") or os.getenv("HOME") .. "/.config") .. "/hypr/devicefix.lua"
+	local file = io.open(path, "r")
+	if file then
+		file:close()
+		require("hypr.devicefix")
+	end
+end
 
 -- Added by hyprmoncfg: its generated monitor rules load last, so nothing before this can override the applied layout.
 do local path = os.getenv("HOME") .. "/.config/hypr/hyprmoncfg.lua"; local file = io.open(path, "r"); if file then file:close(); dofile(path) end end
