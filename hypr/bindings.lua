@@ -109,10 +109,10 @@ for index = 1, 10 do
 end
 
 -- SUPER + scroll to swap workspace
-hl.unbind("SUPER + mouse_up")
-hl.unbind("SUPER + mouse_down")
-o.bind("SUPER + mouse_up", "Scroll active workspace backward", hl.dsp.focus({ workspace = "e+1" }))
-o.bind("SUPER + mouse_down", "Scroll active workspace forward", hl.dsp.focus({ workspace = "e-1" }))
+-- hl.unbind("SUPER + mouse_up")
+-- hl.unbind("SUPER + mouse_down")
+-- o.bind("SUPER + mouse_up", "Scroll active workspace backward", hl.dsp.focus({ workspace = "e-1" }))
+-- o.bind("SUPER + mouse_down", "Scroll active workspace forward", hl.dsp.focus({ workspace = "e+1" }))
 
 -- SUPER + SHIFT + scroll to swap workspace
 o.bind("SUPER + SHIFT + mouse_up", "Scroll active window backward", hl.dsp.layout("focus l"))
