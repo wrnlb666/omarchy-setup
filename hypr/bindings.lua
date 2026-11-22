@@ -41,6 +41,7 @@ hl.unbind("SUPER + A") -- Select all
 hl.unbind("SUPER + M") -- Minimize on floating workspace
 hl.unbind("SUPER + code:20") -- shrink window
 hl.unbind("SUPER + code:21") -- expand window
+hl.unbind("SUPER + ALT + L") -- cycle workspace layout back
 hl.unbind("SUPER + SHIFT + A") -- chatgpt
 hl.unbind("SUPER + SHIFT + M") -- Spotify
 hl.unbind("SUPER + SHIFT + Y") -- Youtube
